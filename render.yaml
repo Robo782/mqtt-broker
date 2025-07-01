@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mqtt-broker
+    env: docker
+    plan: free
+    branch: main
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    healthCheckPath: ""
+    ports:
+      - port: 1883
+        protocol: tcp
